@@ -3,6 +3,7 @@ import { inter } from "./fonts";
 import { Provider } from "../components/ui/provider";
 import "./globals.css";
 import Header from "../components/Header/Header";
+import ReactQueryProvider from "../providers/ReactQueryProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,8 +22,10 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <Provider>
-          <Header />
-          {children}
+          <ReactQueryProvider>
+            <Header />
+            {children}
+          </ReactQueryProvider>
         </Provider>
       </body>
     </html>

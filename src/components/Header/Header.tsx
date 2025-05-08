@@ -10,7 +10,6 @@ import {
   useDisclosure,
   Stack,
 } from "@chakra-ui/react";
-import { useColorModeValue } from "../ui/color-mode";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdOutlineMenu } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
@@ -41,42 +40,48 @@ const NavLink = (props: Props) => {
 const Header: FC<any> = () => {
   const { open, onOpen, onClose } = useDisclosure();
   return (
-    <Box px={4}>
+    <Box px={40}>
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         <IconButton
           size={"md"}
           aria-label={"Open Menu"}
           display={{ md: "none" }}
           onClick={open ? onClose : onOpen}
-          variant={'ghost'}
-          
+          variant={"ghost"}
         >
           {open ? <IoMdClose /> : <MdOutlineMenu />}
         </IconButton>
-        <HStack spaceX={20} alignItems={"center"}>
-          <Box>Logo</Box>
-          <HStack as={"nav"} spaceX={10} display={{ base: "none", md: "flex" }}>
-            {Links.map((link) => (
-              <NavLink key={link}>{link}</NavLink>
-            ))}
+        <Box>Logo</Box>
+
+        <HStack spaceX={10}>
+          <HStack spaceX={15} alignItems={"center"}>
+            <HStack
+              as={"nav"}
+              spaceX={10}
+              display={{ base: "none", md: "flex" }}
+            >
+              {Links.map((link) => (
+                <NavLink key={link}>{link}</NavLink>
+              ))}
+            </HStack>
           </HStack>
-        </HStack>
-        <HStack>
-          <NavLink>
-            <Icon as={'a'}>
-              <FaGithub />
-            </Icon>
-          </NavLink>
-          <NavLink>
-            <Icon>
-              <FaXTwitter />
-            </Icon>
-          </NavLink>
-          <NavLink>
-            <Icon>
-              <FaLinkedin />
-            </Icon>
-          </NavLink>
+          <HStack spaceX={2}>
+            <NavLink>
+              <Icon as={"a"} color={"#666666"}>
+                <FaGithub />
+              </Icon>
+            </NavLink>
+            <NavLink>
+              <Icon as={"a"} color={"#666666"}>
+                <FaXTwitter />
+              </Icon>
+            </NavLink>
+            <NavLink>
+              <Icon as={"a"} color={"#666666"}>
+                <FaLinkedin />
+              </Icon>
+            </NavLink>
+          </HStack>
         </HStack>
       </Flex>
       {open ? (
