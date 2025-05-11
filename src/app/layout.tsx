@@ -4,6 +4,7 @@ import { Provider } from "../components/ui/provider";
 import "./globals.css";
 import Header from "../components/Header/Header";
 import ReactQueryProvider from "../providers/ReactQueryProvider";
+import Footer from "../components/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,6 +26,7 @@ export default function RootLayout({
           <ReactQueryProvider>
             <Header />
             {children}
+            <Footer />
           </ReactQueryProvider>
         </Provider>
       </body>

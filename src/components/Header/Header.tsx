@@ -14,10 +14,11 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdOutlineMenu } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import { FaXTwitter } from "react-icons/fa6";
+import { Links } from "../../lib/utils";
 interface Props {
   children: React.ReactNode;
 }
-const Links = ["Home", "About", "Tech Stack", "Projects", "Contact"];
+
 
 const NavLink = (props: Props) => {
   const { children } = props;
