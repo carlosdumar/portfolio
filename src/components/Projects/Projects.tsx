@@ -46,7 +46,7 @@ const Projects: FC = () => {
         <Text fontSize={24} color={"#42446E"} fontWeight={"bold"}>
           Projects
         </Text>
-        <Text color={"#666666"}>Things I've built so far</Text>
+        <Text color={"#666666"}>Things Ive built so far</Text>
       </Box>
 
       <Flex
