@@ -18,7 +18,7 @@ interface Props {
 const NavLink = (props: Props) => {
   const { children } = props;
   return (
-    <Box
+    <Link
       as="a"
       px={2}
       py={1}
@@ -30,7 +30,7 @@ const NavLink = (props: Props) => {
       fontSize={'sm'}
     >
       {children}
-    </Box>
+    </Link>
   );
 };
 

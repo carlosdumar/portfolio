@@ -9,6 +9,7 @@ import {
   IconButton,
   useDisclosure,
   Stack,
+  Link,
 } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdOutlineMenu } from "react-icons/md";
@@ -19,22 +20,20 @@ interface Props {
   children: React.ReactNode;
 }
 
-
 const NavLink = (props: Props) => {
   const { children } = props;
   return (
-    <Box
-      as="a"
+    <Link
       px={2}
       py={1}
       rounded={"md"}
       _hover={{
         textDecoration: "none",
       }}
-      href={"#"}
+      href="#"
     >
       {children}
-    </Box>
+    </Link>
   );
 };
 

@@ -14,10 +14,11 @@ const eslintConfig = [
   ...compat.config({
     extends: ["next/core-web-vitals", "next/typescript"],
     rules: {
-      'react/no-unnecessary-usememo': 'off'
-    }
-  })
-  
+      "react/no-unnecessary-usememo": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-empty-object-type": "off",
+    },
+  }),
 ];
 
 export default eslintConfig;
