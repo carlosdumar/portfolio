@@ -1,7 +1,6 @@
 "use client";
 
 import { FC } from "react";
-import { Project } from "../../types/project";
 import useGitHubUser from "../../hooks/useGitHubUser";
 import {
   VStack,

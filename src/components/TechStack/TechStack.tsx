@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Center, VStack } from "@chakra-ui/react";
+import { Box, Flex, Text, VStack } from "@chakra-ui/react";
 import Icon from "../Icon/Icon";
 
 const icons = [
@@ -54,7 +54,7 @@ const TechStack = () => {
             My Tech Stack
           </Text>
           <Text color={"#666666"}>
-            Technologies I've been working with recently
+            Technologies Ive been working with recently
           </Text>
         </VStack>
 
