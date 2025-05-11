@@ -18,6 +18,7 @@ import {
 import { FiLink } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
 import { Toaster, toaster } from "../ui/toaster";
+import { excludedProjects } from "../../lib/utils";
 
 const textStyle = {
   overflow: "hidden",
@@ -32,11 +33,7 @@ const Projects: FC = () => {
   console.log("user", user);
 
   const filteredProjects = user?.filter(
-    (project: any) =>
-      project.name !== "VentasMercadoLibre" &&
-      project.name !== "test-royal-caribbean" &&
-      project.name !== "nextjs-dashboard" &&
-      project.name !== "platzicourse"
+    (project: any) => !excludedProjects.includes(project.name)
   );
   if (isError) {
     toaster.create({
@@ -46,7 +43,7 @@ const Projects: FC = () => {
   }
   return (
     <VStack px={{ md: 80, base: 4 }} gapY={10}>
-      <Box textAlign={'center'}>
+      <Box textAlign={"center"}>
         <Text fontSize={24} color={"#42446E"} fontWeight={"bold"}>
           Projects
         </Text>

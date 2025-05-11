@@ -1,0 +1,78 @@
+import {
+  Box,
+  HStack,
+  Icon,
+  VStack,
+  Text,
+  Link,
+  Separator,
+} from "@chakra-ui/react";
+import { Links } from "../../lib/utils";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
+interface Props {
+  children: React.ReactNode;
+}
+
+const NavLink = (props: Props) => {
+  const { children } = props;
+  return (
+    <Box
+      as="a"
+      px={2}
+      py={1}
+      rounded={"md"}
+      _hover={{
+        textDecoration: "none",
+      }}
+      href={"#"}
+      fontSize={'sm'}
+    >
+      {children}
+    </Box>
+  );
+};
+
+const Footer = () => {
+  return (
+    <VStack px={{ md: 80, base: 4 }}>
+      <HStack w={"100%"} py={'5'}>
+        <HStack w={"100%"} justifyContent={"space-between"}>
+          <Box>Logo</Box>
+          <HStack w={'60%'} justifyContent={'space-between'}>
+            <Text fontSize={'sm'}>+573015363012</Text>
+            <Link href="mailto:example@email.com" fontSize={'sm'}>carlosdumar@gmail.com</Link>
+            <HStack spaceX={2}>
+              <NavLink>
+                <Icon as={"a"} color={"#42446E"}  fontSize={'16px'}>
+                  <FaGithub />
+                </Icon>
+              </NavLink>
+              <NavLink>
+                <Icon as={"a"} color={"#42446E"} fontSize={'16px'}>
+                  <FaXTwitter />
+                </Icon>
+              </NavLink>
+              <NavLink>
+                <Icon as={"a"} color={"#42446E"}  fontSize={'16px'}>
+                  <FaLinkedin />
+                </Icon>
+              </NavLink>
+            </HStack>
+          </HStack>
+        </HStack>
+      </HStack>
+      <Separator size="md" w={'100%'}/>
+      <HStack spaceX={15} alignItems={"center"} w={'100%'} py={'5'}>
+        <HStack as={"nav"} spaceX={10} display={{ base: "none", md: "flex" }}>
+          {Links.map((link) => (
+            <NavLink key={link}>{link}</NavLink>
+          ))}
+        </HStack>
+      </HStack>
+    </VStack>
+  );
+};
+
+export default Footer;
