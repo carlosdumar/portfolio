@@ -47,7 +47,7 @@ const icons = [
 
 const TechStack = () => {
   return (
-    <Box id="techstack" px={{ md: 80, base: 4 }}>
+    <Box id="techstack" px={{ lg: 80, md: 40, base: 4 }}>
       <VStack textAlign={"Box"} gapY={10}>
         <VStack gapY={2}>
           <Text fontSize={24} color={"#42446E"} fontWeight={"bold"}>

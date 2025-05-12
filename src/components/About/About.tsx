@@ -5,7 +5,7 @@ import { CgCalendarDates } from "react-icons/cg";
 
 const About = () => {
   return (
-    <Flex id="about" flexDirection={"column"} px={{ md: 80, base: 4 }}>
+    <Flex id="about" flexDirection={"column"} px={{ lg: 80, md: 40, base: 4 }}>
       <VStack>
         <Text
           fontSize={24}
