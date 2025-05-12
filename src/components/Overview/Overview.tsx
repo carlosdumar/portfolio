@@ -7,7 +7,7 @@ const ringCss = defineStyle({
 
 const Overview = () => {
   return (
-    <Box  display={"flex"} justifyContent={"space-between"} width={"100%"}>
+    <Box id="overview"  display={"flex"} justifyContent={"space-between"} width={"100%"}>
       <HStack px={{md:80, base: 4}}  justifyContent={"space-between"} width={'100%'}>
         <Text fontWeight={"bold"} color={"#42446E"} fontSize={30}>
           Hi 👋, <br />

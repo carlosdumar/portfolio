@@ -9,33 +9,13 @@ import {
   IconButton,
   useDisclosure,
   Stack,
-  Link,
 } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdOutlineMenu } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import { FaXTwitter } from "react-icons/fa6";
 import { Links } from "../../lib/utils";
-interface Props {
-  children: React.ReactNode;
-}
-
-const NavLink = (props: Props) => {
-  const { children } = props;
-  return (
-    <Link
-      px={2}
-      py={1}
-      rounded={"md"}
-      _hover={{
-        textDecoration: "none",
-      }}
-      href="#"
-    >
-      {children}
-    </Link>
-  );
-};
+import NavLink from "../NavLink/NavLink";
 
 const Header: FC<any> = () => {
   const { open, onOpen, onClose } = useDisclosure();
