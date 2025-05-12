@@ -14,26 +14,28 @@ import NavLink from "../NavLink/NavLink";
 
 const Footer = () => {
   return (
-    <VStack px={40}>
-      <HStack w={"100%"} py={'5'}>
+    <VStack px={{ lg: 80, md: 40, base: 4 }}>
+      <HStack w={"100%"} py={"5"}>
         <HStack w={"100%"} justifyContent={"space-between"}>
           <Box>Logo</Box>
-          <HStack w={'60%'} justifyContent={'space-between'}>
-            <Text fontSize={'sm'}>+573015363012</Text>
-            <Link href="mailto:example@email.com" fontSize={'sm'}>carlosdumar@gmail.com</Link>
+          <HStack w={"60%"} justifyContent={"space-between"}>
+            <Text fontSize={"sm"}>+573015363012</Text>
+            <Link href="mailto:example@email.com" fontSize={"sm"}>
+              carlosdumar@gmail.com
+            </Link>
             <HStack spaceX={2}>
               <NavLink>
-                <Icon as={"a"} color={"#42446E"}  fontSize={'16px'}>
+                <Icon as={"a"} color={"#42446E"} fontSize={"16px"}>
                   <FaGithub />
                 </Icon>
               </NavLink>
               <NavLink>
-                <Icon as={"a"} color={"#42446E"} fontSize={'16px'}>
+                <Icon as={"a"} color={"#42446E"} fontSize={"16px"}>
                   <FaXTwitter />
                 </Icon>
               </NavLink>
               <NavLink>
-                <Icon as={"a"} color={"#42446E"}  fontSize={'16px'}>
+                <Icon as={"a"} color={"#42446E"} fontSize={"16px"}>
                   <FaLinkedin />
                 </Icon>
               </NavLink>
@@ -41,8 +43,8 @@ const Footer = () => {
           </HStack>
         </HStack>
       </HStack>
-      <Separator size="md" w={'100%'}/>
-      <HStack spaceX={15} alignItems={"center"} w={'100%'} py={'5'}>
+      <Separator size="md" w={"100%"} />
+      <HStack spaceX={15} alignItems={"center"} w={"100%"} py={"5"}>
         <HStack as={"nav"} spaceX={10} display={{ base: "none", md: "flex" }}>
           {Links.map((link) => (
             <NavLink key={link}>{link}</NavLink>
