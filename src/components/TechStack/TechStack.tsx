@@ -47,8 +47,8 @@ const icons = [
 
 const TechStack = () => {
   return (
-    <Box px={{md:80, base: 4}}>
-      <VStack  textAlign={"Box"} gapY={10}>
+    <Box id="techstack" px={{ md: 80, base: 4 }}>
+      <VStack textAlign={"Box"} gapY={10}>
         <VStack gapY={2}>
           <Text fontSize={24} color={"#42446E"} fontWeight={"bold"}>
             My Tech Stack
@@ -58,7 +58,12 @@ const TechStack = () => {
           </Text>
         </VStack>
 
-        <Flex gapX={40} gapY={10} flexWrap={"wrap"} justifyContent={'space-between'}>
+        <Flex
+          gapX={40}
+          gapY={10}
+          flexWrap={"wrap"}
+          justifyContent={"space-between"}
+        >
           {icons.map((icon) => {
             return (
               <Icon

@@ -10,33 +10,11 @@ import {
 import { Links } from "../../lib/utils";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-
-interface Props {
-  children: React.ReactNode;
-}
-
-const NavLink = (props: Props) => {
-  const { children } = props;
-  return (
-    <Link
-      as="a"
-      px={2}
-      py={1}
-      rounded={"md"}
-      _hover={{
-        textDecoration: "none",
-      }}
-      href={"#"}
-      fontSize={'sm'}
-    >
-      {children}
-    </Link>
-  );
-};
+import NavLink from "../NavLink/NavLink";
 
 const Footer = () => {
   return (
-    <VStack px={{ md: 80, base: 4 }}>
+    <VStack px={40}>
       <HStack w={"100%"} py={'5'}>
         <HStack w={"100%"} justifyContent={"space-between"}>
           <Box>Logo</Box>
