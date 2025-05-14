@@ -20,8 +20,15 @@ import NavLink from "../NavLink/NavLink";
 const Header: FC<any> = () => {
   const { open, onOpen, onClose } = useDisclosure();
   return (
-    <Box px={40}>
-      <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+    <Box
+      px={40}
+      position={"fixed"}
+      width={"100%"}
+      top={"0"}
+      background={"white"}
+      zIndex={2}
+    >
+      <Flex h={16} alignItems={"center"} justifyContent={"space-between"} >
         <IconButton
           size={"md"}
           aria-label={"Open Menu"}
