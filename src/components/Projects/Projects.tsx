@@ -29,7 +29,6 @@ const textStyle = {
 
 const Projects: FC = () => {
   const { user = [], isLoading, isError, error } = useGitHubUser();
-  console.log("user", user);
 
   const filteredProjects = user?.filter(
     (project: any) => !excludedProjects.includes(project.name)
@@ -92,14 +91,14 @@ const Projects: FC = () => {
                             Live Preview
                           </Link>
                         </Box>
-                        <Box>
+                        <HStack gapX={1}>
                           <Icon>
                             <FaGithub />
                           </Icon>
                           <Link href={url} textDecoration={"underline"}>
                             View Code
                           </Link>
-                        </Box>
+                        </HStack>
                       </HStack>
                     </VStack>
                   </Card.Body>
