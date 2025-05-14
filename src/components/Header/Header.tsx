@@ -9,6 +9,7 @@ import {
   IconButton,
   useDisclosure,
   Stack,
+  Image,
 } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdOutlineMenu } from "react-icons/md";
@@ -21,14 +22,15 @@ const Header: FC<any> = () => {
   const { open, onOpen, onClose } = useDisclosure();
   return (
     <Box
-      px={40}
+      px={{ lg: 80 }}
+      py={3}
       position={"fixed"}
       width={"100%"}
       top={"0"}
       background={"white"}
       zIndex={2}
     >
-      <Flex h={16} alignItems={"center"} justifyContent={"space-between"} >
+      <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         <IconButton
           size={"md"}
           aria-label={"Open Menu"}
@@ -38,7 +40,14 @@ const Header: FC<any> = () => {
         >
           {open ? <IoMdClose /> : <MdOutlineMenu />}
         </IconButton>
-        <Box>Logo</Box>
+        <Box>
+          <Image
+            backgroundClip={"text"}            
+            style={{ backgroundImage: "linear-gradient(#E70FAA, #13B0F5)" }}
+            src={"/images/logo.png"}
+            width={"120px"}
+          />
+        </Box>
 
         <HStack spaceX={10}>
           <HStack spaceX={15} alignItems={"center"}>
