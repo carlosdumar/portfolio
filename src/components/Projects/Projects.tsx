@@ -27,6 +27,12 @@ const textStyle = {
   display: "-webkit-box",
 };
 
+const objCovers = {
+  "restaurant-ui": "restaurant.png",
+  "weather-app": "weather.png",
+  "youtube-homepage": "youtube.png",
+};
+
 const Projects: FC = () => {
   const { user = [], isLoading, isError, error } = useGitHubUser();
 
@@ -39,6 +45,7 @@ const Projects: FC = () => {
       type: "error",
     });
   }
+  console.log({ user });
   return (
     <VStack id="projects" px={{ lg: 80, md: 40, base: 4 }} gapY={10}>
       <Box textAlign={"center"}>
@@ -54,8 +61,9 @@ const Projects: FC = () => {
         gapX={"10px"}
         justifyContent={{ md: "space-between", base: "center" }}
       >
-        {filteredProjects?.map((project: any) => {
-          const { description, id, language, name, url, homepage } = project;
+        {filteredProjects?.map((project: any, index: number) => {
+          const { description, id, language, name, html_url, homepage } =
+            project;
           return (
             <Card.Root
               key={id}
@@ -65,10 +73,18 @@ const Projects: FC = () => {
               rounded={"2xl"}
             >
               {isLoading ? (
-                <Spinner size="xl" />
+                <Card.Body px={4} alignItems={"center"}>
+                  <Spinner size="xl" />
+                </Card.Body>
               ) : (
                 <>
-                  <Image src="/images/cover.jpg" alt="cover project" />
+                  <Image
+                    src={`/images/${
+                      objCovers[name as keyof typeof objCovers] || "cover.jpg"
+                    }`}
+                    alt="cover project"
+                    height={200}
+                  />
                   <Card.Body px={4}>
                     <VStack alignItems={"flex-start"}>
                       <Text fontSize={"xl"} fontWeight={"bold"}>
@@ -87,7 +103,11 @@ const Projects: FC = () => {
                           <Icon>
                             <FiLink />
                           </Icon>
-                          <Link href={homepage} textDecoration={"underline"}>
+                          <Link
+                            href={homepage}
+                            textDecoration={"underline"}
+                            target="_blank"
+                          >
                             Live Preview
                           </Link>
                         </Box>
@@ -95,7 +115,11 @@ const Projects: FC = () => {
                           <Icon>
                             <FaGithub />
                           </Icon>
-                          <Link href={url} textDecoration={"underline"}>
+                          <Link
+                            href={html_url}
+                            textDecoration={"underline"}
+                            target="_blank"
+                          >
                             View Code
                           </Link>
                         </HStack>

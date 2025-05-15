@@ -42,7 +42,7 @@ const Header: FC<any> = () => {
         </IconButton>
         <Box>
           <Image
-            backgroundClip={"text"}            
+            backgroundClip={"text"}
             style={{ backgroundImage: "linear-gradient(#E70FAA, #13B0F5)" }}
             src={"/images/logo.png"}
             width={"120px"}
@@ -62,17 +62,17 @@ const Header: FC<any> = () => {
             </HStack>
           </HStack>
           <HStack spaceX={2}>
-            <NavLink>
+            <NavLink url="https://github.com/adminDreamBike/">
               <Icon as={"a"} color={"#666666"}>
                 <FaGithub />
               </Icon>
             </NavLink>
-            <NavLink>
+            <NavLink url="https://x.com/ingitrodriguez">
               <Icon as={"a"} color={"#666666"}>
                 <FaXTwitter />
               </Icon>
             </NavLink>
-            <NavLink>
+            <NavLink url="https://www.linkedin.com/in/carlosdumar/">
               <Icon as={"a"} color={"#666666"}>
                 <FaLinkedin />
               </Icon>

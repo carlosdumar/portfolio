@@ -45,6 +45,43 @@ const About = () => {
         >
           <VStack alignItems={"flex-start"}>
             <Text fontSize={"18px"} color={"#666666"}>
+              Senior Software Engineer
+            </Text>
+            <HStack>
+              <HStack color={"#A7A7A7"}>
+                <Icon>
+                  <FaRegBuilding />
+                </Icon>
+                <Text fontSize={"14px"}>EPAM</Text>
+              </HStack>
+              <HStack color={"#A7A7A7"}>
+                <Icon>
+                  <SlLocationPin />
+                </Icon>
+                <Text>Medellin</Text>
+              </HStack>
+            </HStack>
+          </VStack>
+          <VStack alignItems={"flex-end"}>
+            <Badge colorPalette="green" size={"md"} px={5} py={2} rounded={20}>
+              Full Time
+            </Badge>
+            <HStack color={"#A7A7A7"}>
+              <Icon>
+                <CgCalendarDates />
+              </Icon>
+              <Text fontSize={"14px"}>Jan 2025 - Present</Text>
+            </HStack>
+          </VStack>
+        </HStack>
+        <HStack
+          w={"100%"}
+          justifyContent={"space-between"}
+          pb={"5"}
+          borderBottom={"2px solid #A7A7A7"}
+        >
+          <VStack alignItems={"flex-start"}>
+            <Text fontSize={"18px"} color={"#666666"}>
               Web UI Developer
             </Text>
             <HStack>
@@ -70,7 +107,7 @@ const About = () => {
               <Icon>
                 <CgCalendarDates />
               </Icon>
-              <Text fontSize={"14px"}>Jun 2021 - Jan 2024</Text>
+              <Text fontSize={"14px"}>Jun 2021 - Jan 2025</Text>
             </HStack>
           </VStack>
         </HStack>
