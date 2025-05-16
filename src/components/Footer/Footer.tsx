@@ -22,6 +22,7 @@ const Footer = () => {
             <Image             
               src={"/images/logo.png"}
               width={"120px"}
+              alt="image log"
             />
           </Box>
           <HStack w={"60%"} justifyContent={"space-between"}>
