@@ -61,7 +61,7 @@ const Projects: FC = () => {
         gapX={"10px"}
         justifyContent={{ md: "space-between", base: "center" }}
       >
-        {filteredProjects?.map((project: any, index: number) => {
+        {filteredProjects?.map((project: any) => {
           const { description, id, language, name, html_url, homepage } =
             project;
           return (

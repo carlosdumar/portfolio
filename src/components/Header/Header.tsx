@@ -46,6 +46,7 @@ const Header: FC<any> = () => {
             style={{ backgroundImage: "linear-gradient(#E70FAA, #13B0F5)" }}
             src={"/images/logo.png"}
             width={"120px"}
+            alt="image logo header"
           />
         </Box>
 
