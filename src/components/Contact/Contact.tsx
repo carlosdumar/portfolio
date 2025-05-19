@@ -1,4 +1,4 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Text, Heading } from "@chakra-ui/react";
 
 const Contact = () => {
   return (
@@ -9,19 +9,19 @@ const Contact = () => {
       py={"10"}
       px={{ lg: 40, md: 40, base: 4 }}
     >
-      <Text fontSize={"4xl"} color={"#1E0E62"} fontWeight={"bold"}>
+      <Heading size="4xl" color={"#1E0E62"} fontWeight={"bold"} wordBreak={"break-word"}>
         For any questions please mail us:
-      </Text>
-      <Text
+      </Heading>
+      <Heading
         color={"transparent"}
-        backgroundClip={"text"}
-        as={"span"}
+        backgroundClip={"text"}       
         style={{ backgroundImage: "linear-gradient(#E70FAA, #13B0F5)" }}
         fontWeight={"bold"}
-        fontSize={"4xl"}
+        size="4xl"
+        wordBreak={"break-word"}
       >
         carlosdumar4@gmail.com
-      </Text>
+      </Heading>
     </Flex>
   );
 };
