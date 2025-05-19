@@ -12,7 +12,7 @@ const Overview = () => {
       display={"flex"}
       justifyContent={"space-between"}
       width={"100%"}
-      px={{ lg: 80, base: 4 }}
+      px={{ lg: 40, md: 40, base: 4 }}
     >
       <HStack justifyContent={"space-between"} width={"100%"}>
         <Text fontWeight={"bold"} color={"#42446E"} fontSize={30}>

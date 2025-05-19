@@ -47,7 +47,7 @@ const Projects: FC = () => {
   }
   console.log({ user });
   return (
-    <VStack id="projects" px={{ lg: 80, md: 40, base: 4 }} gapY={10}>
+    <VStack id="projects" px={{ lg: 40, md: 40, base: 4 }} gapY={10}>
       <Box textAlign={"center"}>
         <Text fontSize={24} color={"#42446E"} fontWeight={"bold"}>
           Projects

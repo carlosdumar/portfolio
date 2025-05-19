@@ -15,7 +15,7 @@ import NavLink from "../NavLink/NavLink";
 
 const Footer = () => {
   return (
-    <VStack px={{ lg: 80, md: 40, base: 4 }}>
+    <VStack px={{ lg: 40, md: 40, base: 4 }}>
       <HStack w={"100%"} py={2}>
         <HStack w={"100%"} justifyContent={"space-between"}>
           <Box>

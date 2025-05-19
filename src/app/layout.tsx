@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "../components/Header/Header";
 import ReactQueryProvider from "../providers/ReactQueryProvider";
 import Footer from "../components/Footer/Footer";
+import { ThemeProvider } from "../context/ThemeContext";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,13 +23,15 @@ export default function RootLayout({
         className={`${inter.className} antialiased`}
         suppressHydrationWarning
       >
-        <Provider>
-          <ReactQueryProvider>
-            <Header />
-            {children}
-            <Footer />
-          </ReactQueryProvider>
-        </Provider>
+        <ThemeProvider>
+          <Provider>
+            <ReactQueryProvider>
+              <Header />
+              {children}
+              <Footer />
+            </ReactQueryProvider>
+          </Provider>
+        </ThemeProvider>
       </body>
     </html>
   );
