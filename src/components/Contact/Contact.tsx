@@ -1,4 +1,4 @@
-import { Flex, Text, Heading } from "@chakra-ui/react";
+import { Flex, Heading } from "@chakra-ui/react";
 
 const Contact = () => {
   return (
