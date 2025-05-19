@@ -31,7 +31,7 @@ export const ThemeProvider = ({ children }: ThemeProviderType) => {
           return savedTheme;
         }
 
-        return window.matchMedia("prefers-color-schema: dark").matches
+        return window.matchMedia("(prefers-color-scheme: dark)").matches
           ? "dark"
           : "light";
       }

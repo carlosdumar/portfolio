@@ -18,10 +18,12 @@ import { FaXTwitter } from "react-icons/fa6";
 import { Links } from "../../lib/utils";
 import NavLink from "../NavLink/NavLink";
 import SwitchTheme from "../SwitchTheme/SwitchTheme";
+import { useTheme } from "../../context/ThemeContext";
 
 const Header: FC<any> = () => {
   const { open, onOpen, onClose } = useDisclosure();
-  
+  const { theme } = useTheme();
+  console.log(theme);
   return (
     <Box
       pl={{ lg: 40, md: 40, base: 4 }}
@@ -29,11 +31,12 @@ const Header: FC<any> = () => {
       py={3}
       position={"fixed"}
       width={"100%"}
-      top={"0"}
-      background={"white"}
+      top={"0"}      
       zIndex={2}
       display={'flex'}
       justifyContent={'space-between'}
+      className="header"
+      background={theme === 'dark' ? '#0a0a0a' : '#ffffff'}
     >
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         <IconButton

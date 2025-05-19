@@ -5,7 +5,12 @@ import { useTheme } from "../../context/ThemeContext";
 const SwitchTheme = () => {
   const { toggleTheme } = useTheme();
   return (
-    <Switch.Root colorPalette={"blue"} size="lg" onCheckedChange={toggleTheme}>
+    <Switch.Root
+      colorPalette={"blue"}
+      size="lg"
+      onCheckedChange={toggleTheme}
+      hideFrom="base"
+    >
       <Switch.HiddenInput />
       <Switch.Control>
         <Switch.Thumb />
