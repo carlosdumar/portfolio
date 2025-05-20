@@ -9,7 +9,6 @@ const SwitchTheme = () => {
       colorPalette={"blue"}
       size="lg"
       onCheckedChange={toggleTheme}
-      hideFrom="base"
     >
       <Switch.HiddenInput />
       <Switch.Control>
