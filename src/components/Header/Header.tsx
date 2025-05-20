@@ -31,12 +31,10 @@ const Header: FC<any> = () => {
       py={3}
       position={"fixed"}
       width={"100%"}
-      top={"0"}      
+      top={"0"}
       zIndex={2}
-      display={'flex'}
-      justifyContent={'space-between'}
       className="header"
-      background={theme === 'dark' ? '#0a0a0a' : '#ffffff'}
+      background={theme === "dark" ? "#0a0a0a" : "#ffffff"}
     >
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         <IconButton
@@ -58,11 +56,11 @@ const Header: FC<any> = () => {
           />
         </Box>
 
-        <HStack spaceX={10}>
+        <HStack gapX={{lg: 60, md: 20, base: 10}}>
           <HStack spaceX={15} alignItems={"center"}>
             <HStack
               as={"nav"}
-              spaceX={10}
+              gapX={10}
               display={{ base: "none", md: "flex" }}
             >
               {Links.map((link) => (
@@ -70,7 +68,7 @@ const Header: FC<any> = () => {
               ))}
             </HStack>
           </HStack>
-          <HStack spaceX={2}>
+          <HStack gapX={2}>
             <NavLink url="https://github.com/adminDreamBike/">
               <Icon as={"a"} color={"#666666"}>
                 <FaGithub />
@@ -88,6 +86,7 @@ const Header: FC<any> = () => {
             </NavLink>
           </HStack>
         </HStack>
+        <SwitchTheme />
       </Flex>
       {open ? (
         <Box pb={4} display={{ md: "none" }}>
@@ -98,7 +97,6 @@ const Header: FC<any> = () => {
           </Stack>
         </Box>
       ) : null}
-      <SwitchTheme />
     </Box>
   );
 };
