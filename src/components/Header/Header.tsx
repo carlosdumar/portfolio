@@ -19,7 +19,6 @@ import { Links } from "../../lib/utils";
 import NavLink from "../NavLink/NavLink";
 import SwitchTheme from "../SwitchTheme/SwitchTheme";
 import { useTheme } from "../../context/ThemeContext";
-import { motion } from "framer-motion";
 
 const Header: FC<any> = () => {
   const { open, onOpen, onClose } = useDisclosure();
