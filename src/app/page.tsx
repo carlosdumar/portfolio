@@ -1,9 +1,12 @@
 import { VStack } from "@chakra-ui/react";
-import Overview from "../components/Overview/Overview";
-import TechStack from "../components/TechStack/TechStack";
-import Projects from "../components/Projects/Projects";
-import About from "../components/About/About";
-import Contact from "../components/Contact/Contact";
+
+import {
+  TechStack,
+  Projects,
+  About,
+  Contact,
+  Overview
+} from "../components";
 
 export default function Home() {
   return (
@@ -16,7 +19,7 @@ export default function Home() {
           <TechStack />
           <Contact />
         </VStack>
-      </main>      
+      </main>
     </div>
   );
 }
