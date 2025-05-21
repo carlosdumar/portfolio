@@ -1,3 +1,5 @@
+"use client";
+
 import { Box, Text, Image, defineStyle, HStack } from "@chakra-ui/react";
 
 const ringCss = defineStyle({

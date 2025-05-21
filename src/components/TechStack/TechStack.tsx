@@ -1,3 +1,5 @@
+"use client";
+
 import { Box, Flex, Text, VStack } from "@chakra-ui/react";
 import Icon from "../Icon/Icon";
 

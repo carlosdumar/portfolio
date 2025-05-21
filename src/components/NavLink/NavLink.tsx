@@ -1,4 +1,8 @@
+"use client";
+
 import { Link } from "@chakra-ui/react/link";
+import useScroll from "../../hooks/useScroll";
+import { getElementName } from "../../lib/utils";
 
 interface Props {
   children: React.ReactNode;
@@ -6,11 +10,8 @@ interface Props {
 }
 
 const NavLink = (props: Props) => {
-  const { children, url = '' } = props;
-  const href =
-    typeof children === "string"
-      ? `/#${children.toLowerCase().replace(/ +/g, "")}`
-      : "#";
+  const { children, url = "" } = props;
+  const { scrollToSection } = useScroll();
 
   return (
     <Link
@@ -20,8 +21,9 @@ const NavLink = (props: Props) => {
       _hover={{
         textDecoration: "none",
       }}
-      href={url || href}
-      target={url ? "_blank" : '_self'}
+      href={url || undefined}
+      target={url ? "_blank" : "_self"}
+      onClick={() => scrollToSection(getElementName(children))}
     >
       {children}
     </Link>
