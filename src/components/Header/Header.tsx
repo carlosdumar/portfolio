@@ -19,11 +19,12 @@ import { Links } from "../../lib/utils";
 import NavLink from "../NavLink/NavLink";
 import SwitchTheme from "../SwitchTheme/SwitchTheme";
 import { useTheme } from "../../context/ThemeContext";
+import { motion } from "framer-motion";
 
 const Header: FC<any> = () => {
   const { open, onOpen, onClose } = useDisclosure();
   const { theme } = useTheme();
-  console.log(theme);
+
   return (
     <Box
       pl={{ lg: 40, md: 40, base: 4 }}
@@ -38,7 +39,6 @@ const Header: FC<any> = () => {
     >
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         <IconButton
-          size={"md"}
           aria-label={"Open Menu"}
           display={{ md: "none" }}
           onClick={open ? onClose : onOpen}
@@ -56,13 +56,9 @@ const Header: FC<any> = () => {
           />
         </Box>
 
-        <HStack gapX={{lg: 60, md: 20, base: 10}}>
+        <HStack gapX={{ lg: 60, md: 20, base: 10 }}>
           <HStack spaceX={15} alignItems={"center"}>
-            <HStack
-              as={"nav"}
-              gapX={10}
-              display={{ base: "none", md: "flex" }}
-            >
+            <HStack as={"nav"} gapX={10} display={{ base: "none", md: "flex" }}>
               {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
               ))}
@@ -90,7 +86,7 @@ const Header: FC<any> = () => {
       </Flex>
       {open ? (
         <Box pb={4} display={{ md: "none" }}>
-          <Stack as={"nav"} spaceX={4}>
+          <Stack as={"nav"}>
             {Links.map((link) => (
               <NavLink key={link}>{link}</NavLink>
             ))}

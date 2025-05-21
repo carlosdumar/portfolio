@@ -4,6 +4,7 @@ import { SlLocationPin } from "react-icons/sl";
 import { CgCalendarDates } from "react-icons/cg";
 
 const About = () => {
+  
   return (
     <Flex id="about" flexDirection={"column"} px={{ lg: 40, md: 40, base: 4 }}>
       <VStack>
