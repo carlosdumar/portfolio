@@ -38,7 +38,7 @@ const Header: FC<any> = () => {
     >
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         <IconButton
-          aria-label={"Open Menu"}
+          aria-label={open ? "Close Menu" : "Open Menu"}
           display={{ md: "none" }}
           onClick={open ? onClose : onOpen}
           variant={"ghost"}
