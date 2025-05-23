@@ -1,6 +1,6 @@
 const useScroll = () => {
-  const scrollToSection = (elementName: string | undefined) => {
-    const element = document.getElementById(elementName ?? "");
+  const scrollToSection = (sectionName: string | undefined) => {
+    const element = document.getElementById(sectionName ?? "");
 
     window.scrollTo({
       top: element?.offsetTop,
