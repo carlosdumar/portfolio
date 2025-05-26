@@ -48,21 +48,18 @@ const Footer = () => {
               )}
             </HStack>
             <HStack spaceX={2}>
-              <NavLink>
-                <Icon as={"a"} color={"#42446E"} fontSize={"16px"}>
-                  <FaGithub />
-                </Icon>
-              </NavLink>
-              <NavLink>
-                <Icon as={"a"} color={"#42446E"} fontSize={"16px"}>
-                  <FaXTwitter />
-                </Icon>
-              </NavLink>
-              <NavLink>
-                <Icon as={"a"} color={"#42446E"} fontSize={"18px"}>
-                  <FaLinkedin />
-                </Icon>
-              </NavLink>
+              <NavLink
+                url="https://github.com/adminDreamBike/"
+                icon={<FaGithub color="#42446E" />}
+              />
+              <NavLink
+                url="https://x.com/ingitrodriguez"
+                icon={<FaXTwitter color={"#42446E"} />}
+              />
+              <NavLink
+                url="https://www.linkedin.com/in/carlosdumar/"
+                icon={<FaLinkedin color={"#42446E"} />}
+              />
             </HStack>
           </HStack>
         </HStack>

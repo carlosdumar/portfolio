@@ -64,21 +64,15 @@ const Header: FC<any> = () => {
             </HStack>
           </HStack>
           <HStack gapX={2}>
-            <NavLink url="https://github.com/adminDreamBike/">
-              <Icon as={"a"} color={"#666666"}>
-                <FaGithub />
-              </Icon>
-            </NavLink>
-            <NavLink url="https://x.com/ingitrodriguez">
-              <Icon as={"a"} color={"#666666"}>
-                <FaXTwitter />
-              </Icon>
-            </NavLink>
-            <NavLink url="https://www.linkedin.com/in/carlosdumar/">
-              <Icon as={"a"} color={"#666666"}>
-                <FaLinkedin />
-              </Icon>
-            </NavLink>
+            <NavLink
+              url="https://github.com/adminDreamBike/"
+              icon={<FaGithub />}
+            />
+            <NavLink url="https://x.com/ingitrodriguez" icon={<FaXTwitter/>} />
+            <NavLink
+              url="https://www.linkedin.com/in/carlosdumar/"
+              icon={<FaLinkedin />}
+            />
           </HStack>
         </HStack>
         <SwitchTheme />

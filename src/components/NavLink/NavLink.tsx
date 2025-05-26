@@ -5,12 +5,14 @@ import useScroll from "../../hooks/useScroll";
 import { getElementName } from "../../lib/utils";
 
 interface Props {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   url?: string;
+  icon?: React.ReactNode;
+  iconPosition?: "left" | "right";
 }
 
 const NavLink = (props: Props) => {
-  const { children, url = "" } = props;
+  const { children, url = "", icon, iconPosition = "left" } = props;
   const { scrollToSection } = useScroll();
 
   return (
@@ -25,7 +27,9 @@ const NavLink = (props: Props) => {
       target={url ? "_blank" : "_self"}
       onClick={() => scrollToSection(getElementName(children))}
     >
+      {icon && iconPosition === "left" && icon}
       {children}
+      {icon && iconPosition === "right" && icon}
     </Link>
   );
 };
