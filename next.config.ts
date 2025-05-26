@@ -5,9 +5,6 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["@chakra-ui/react"],
   },
-  babel: {
-    presets: ["next/babel"],
-  },
 };
 
 export default nextConfig;
