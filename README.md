@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8117f6d3-1ec5-4edf-b554-784d09a409d7/deploy-status)](https://app.netlify.com/projects/vocal-mochi-bbe3fc/deploys)
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
