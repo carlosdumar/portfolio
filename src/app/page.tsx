@@ -7,6 +7,7 @@ import {
   Contact,
   Overview
 } from "../components";
+import ChatbotAI from "../components/ChatbotAI/ChatbotAI";
 
 export default function Home() {
   return (
@@ -19,7 +20,8 @@ export default function Home() {
           <TechStack />
           <Contact />
         </VStack>
-      </main>
+        <ChatbotAI />
+      </main>     
     </div>
   );
 }
