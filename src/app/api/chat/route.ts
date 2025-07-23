@@ -58,7 +58,8 @@ export async function POST(req: Request): Promise<Response> {
     messages,     
     onError: (error) => {
       console.log('error', error)
-    }
+    },
+    maxTokens: 1000,
   });
 
 
