@@ -8,7 +8,7 @@ describe("useFetch hook", () => {
     const { result } = await act(async () => renderHook(() =>
       useFetch({ url: "https://dragonball-api.com/api/characters" })
     ));
-    console.log(result.current);
+   
     expect(result.current.data).toBeDefined();
   });
   it("should return error", async() => {

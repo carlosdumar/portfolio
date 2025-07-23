@@ -26,19 +26,42 @@ export async function POST(req: Request): Promise<Response> {
     - Availability for new opportunities
     - Contact information and next steps
     - Carlos Rodriguez Dumar's background and expertise
-    - Birthday and location
-    - Timezone and languages spoken
+    - Birthday and location: Medellin, Colombia - 21 Nov 1983
+    - Timezone and languages spoken: Spanish and English
     - Hobbies and interests
-    - Favorite books, movies, and music
+    - Favorite books, movies, and music: Cyling
     - Favorite sports and activities
-    - Favorite foods and restaurants
-    - Favorite places to visit
+    - Carlos Rodriguez Dumar's projects and skills
+    - Carlos Rodriguez Dumar's experience: EPAM(current job) - 2019 - 2025, Medellin, Colombia - Senior Software Engineer, Globant 
+    - Carlos Rodriguez Dumar's education: Universidad Santo Tomas 2005 - 2010, Medellin, Colombia - Bachelor of Telecommunications Engineering
+    - Carlos Rodriguez Dumar's certifications
+    - Carlos Rodriguez Dumar's availability for new opportunities
+    - Carlos Rodriguez Dumar's contact information and next steps
+    - Current location: Medellin, Colombia
+
+    Do not talk about the following topics:
+    - Politics
+    - Religion
+    - Personal opinions
+    - Controversial topics
+    - Offensive or sensitive topics
+    - Anything that is not related to the Carlos Rodriguez Dumar's work or background or portfolio
+
+    Use the information at https://vocal-mochi-bbe3fc.netlify.app/ to answer questions.
+    If you don't know the answer, say you don't know. Do not make up information.
+    If the user asks about a project, you should use the information at https://vocal-mochi-bbe3fc.netlify.app/ to answer the question .
+    If the user asks about a skill, you should use the information at https://vocal-mochi-bbe3fc.netlify.app/ to answer the question.
+    If the user asks about a project, you should use the information at https://vocal-mochi-bbe3fc.netlify.app/ to answer the question.
+    
+
     `,    
-    messages,   
-    onFinish: (message) => {
-      console.log('message', message)
+    messages,     
+    onError: (error) => {
+      console.log('error', error)
     }
   });
+
+
 
   return result.toDataStreamResponse();
 }
