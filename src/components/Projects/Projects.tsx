@@ -7,7 +7,6 @@ import {
   Text,
   Flex,
   Card,
-  Image,
   HStack,
   Link,
   Box,
@@ -18,6 +17,7 @@ import { FiLink } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
 import { Toaster, toaster } from "../ui/toaster";
 import { excludedProjects } from "../../lib/utils";
+import PictureImage from "../PictureImage/PictureImage";
 
 const textStyle = {
   overflow: "hidden",
@@ -28,9 +28,9 @@ const textStyle = {
 };
 
 const objCovers = {
-  "restaurant-ui": "restaurant.png",
-  "weather-app": "weather.png",
-  "youtube-homepage": "youtube.png",
+  "restaurant-ui": "restaurant.webp",
+  "weather-app": "weather.webp",
+  "youtube-homepage": "youtube.webp",
 };
 
 const Projects: FC = () => {
@@ -58,7 +58,7 @@ const Projects: FC = () => {
       <Flex
         flexWrap={"wrap"}
         gapY={5}
-        gapX={"10px"}
+        gapX={10}
         justifyContent={{ md: "space-between", base: "center" }}
       >
         {filteredProjects?.map((project: any) => {
@@ -78,12 +78,13 @@ const Projects: FC = () => {
                 </Card.Body>
               ) : (
                 <>
-                  <Image
-                    src={`/images/${
-                      objCovers[name as keyof typeof objCovers] || "cover.jpg"
-                    }`}
+                  <PictureImage
+                    height={'200px'}
                     alt="cover project"
-                    height={200}
+                    src={`/images/${
+                      objCovers[name as keyof typeof objCovers] || "cover.webp"
+                    }`}
+                    width={"100%"}
                   />
                   <Card.Body px={4}>
                     <VStack alignItems={"flex-start"}>

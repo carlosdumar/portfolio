@@ -7,4 +7,7 @@ module.exports = {
   },
   testEnvironment: "jsdom",
   collectCoverageFrom: ["src/**/*.{js,jsx,ts,tsx}", "!src/components/ui/**"],
+  moduleNameMapper: {
+    '^next/font/google$': '<rootDir>/__mocks__/mockNextGoogleFont.js',
+  },
 };
