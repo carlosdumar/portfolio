@@ -17,6 +17,7 @@ const eslintConfig = [
       "react/no-unnecessary-usememo": "off",
       "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/no-empty-object-type": "off",
+      "react/no-unescaped-entities": "off",
     },
   }),
 ];
