@@ -3,9 +3,9 @@ import { streamText } from "ai";
 
 export const maxDuration = 30;
 
-export async function POST(req: Request) {
+export async function POST(req: Request): Promise<Response> {
   const { messages } = await req.json();
-
+    
   const result = await streamText({
     model: openai("gpt-4o"),
     system: `You are a helpful AI assistant for a Carlos Rodriguez's portfolio website. You should:
@@ -33,10 +33,13 @@ export async function POST(req: Request) {
     - Favorite sports and activities
     - Favorite foods and restaurants
     - Favorite places to visit
-    `,
-    
+    `,    
     messages,   
+    onFinish: (message) => {
+      console.log('message', message)
+    }
   });
 
   return result.toDataStreamResponse();
 }
+
