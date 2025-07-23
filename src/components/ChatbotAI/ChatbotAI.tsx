@@ -88,7 +88,7 @@ const ChatbotAI = () => {
   return (
     <div
       className="bg-gradient-to-br from-slate-50 to-slate-100 p-4 fixed bottom-4 right-4 z-50"
-      ref={chatbotRef}
+      ref={chatbotRef as React.RefObject<HTMLDivElement>}
     >
       <div className="max-w-2xl mx-auto">
         <Card.Root className="shadow-xl border-0 bg-white/80 backdrop-blur">
