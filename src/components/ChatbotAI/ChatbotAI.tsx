@@ -11,7 +11,7 @@ import {
   CardFooter,
   CardTitle,
 } from "@chakra-ui/react";
-import { bungee } from "../../app/fonts";
+import { bungee, openSans } from "../../app/fonts";
 
 const ChatbotAI = () => {
   const { messages, input, handleInputChange, handleSubmit, isLoading } =
@@ -85,7 +85,7 @@ const ChatbotAI = () => {
                 </Avatar.Root>
                 <div>
                   <CardTitle className={`text-lg ${bungee.className} antialiased`}>Portfolio Assistant</CardTitle>
-                  <p className="text-blue-100 text-sm">
+                  <p className={`text-blue-100 text-sm ${openSans.className} antialiased`}>
                     Online • Ready to help
                   </p>
                 </div>

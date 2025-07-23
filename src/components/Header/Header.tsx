@@ -5,7 +5,6 @@ import {
   Box,
   Flex,
   HStack,
-  Icon,
   IconButton,
   useDisclosure,
   Stack,
