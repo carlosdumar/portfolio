@@ -49,7 +49,7 @@ const Projects: FC = () => {
   return (
     <VStack id="projects" px={{ lg: 40, md: 40, base: 4 }} gapY={10}>
       <Box textAlign={"center"}>
-        <Text fontSize={24} color={"#42446E"} fontWeight={"bold"}>
+        <Text fontSize={32} color={"#42446E"} fontWeight={"bold"}>
           Projects
         </Text>
         <Text color={"#666666"}>Things Ive built so far</Text>
@@ -105,9 +105,9 @@ const Projects: FC = () => {
                             <FiLink />
                           </Icon>
                           <Link
-                            href={homepage}
+                            href={homepage || null}
                             textDecoration={"underline"}
-                            target="_blank"
+                            target="_blank"                            
                           >
                             Live Preview
                           </Link>

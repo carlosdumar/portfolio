@@ -61,7 +61,6 @@ const ChatbotAI = () => {
       handleSubmit(syntheticEvent);
     }, 100);
   };
-  console.log("error", error);
 
   if (isMinimized) {
     return (

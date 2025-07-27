@@ -52,7 +52,7 @@ const TechStack = () => {
     <Box id="techstack" px={{ lg: 40, md: 40, base: 4 }}>
       <VStack textAlign={"Box"} gapY={10}>
         <VStack gapY={2}>
-          <Text fontSize={24} color={"#42446E"} fontWeight={"bold"}>
+          <Text fontSize={32} color={"#42446E"} fontWeight={"bold"}>
             My Tech Stack
           </Text>
           <Text color={"#666666"}>
