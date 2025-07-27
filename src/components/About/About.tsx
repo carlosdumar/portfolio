@@ -9,7 +9,7 @@ const About = () => {
     <Flex id="about" flexDirection={"column"} px={{ lg: 40, md: 40, base: 4 }}>
       <VStack>
         <Text
-          fontSize={24}
+          fontSize={32}
           color={"#42446E"}
           fontWeight={"bold"}
           textAlign={"left"}
@@ -28,7 +28,7 @@ const About = () => {
       </VStack>
       <VStack w={"100%"}>
         <Text
-          fontSize={24}
+          fontSize={32}
           color={"#42446E"}
           fontWeight={"bold"}
           textAlign={"left"}
@@ -187,7 +187,7 @@ const About = () => {
       </VStack>
       <VStack w={"100%"}>
         <Text
-          fontSize={24}
+          fontSize={32}
           color={"#42446E"}
           fontWeight={"bold"}
           textAlign={"left"}
