@@ -48,7 +48,7 @@ const Header: FC<any> = () => {
           <Image
             backgroundClip={"text"}
             style={{ backgroundImage: "linear-gradient(#E70FAA, #13B0F5)" }}
-            src={"/images/logo.png"}
+            src={"/images/logo.webp"}
             width={"120px"}
             alt="image logo header"
           />
@@ -58,7 +58,9 @@ const Header: FC<any> = () => {
           <HStack spaceX={15} alignItems={"center"}>
             <HStack as={"nav"} gapX={10} display={{ base: "none", md: "flex" }}>
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink key={link} aria-label={`link to ${link}`}>
+                  {link}
+                </NavLink>
               ))}
             </HStack>
           </HStack>
@@ -66,11 +68,17 @@ const Header: FC<any> = () => {
             <NavLink
               url="https://github.com/adminDreamBike/"
               icon={<FaGithub />}
+              aria-label="link to my github profile"
             />
-            <NavLink url="https://x.com/ingitrodriguez" icon={<FaXTwitter/>} />
+            <NavLink
+              url="https://x.com/ingitrodriguez"
+              icon={<FaXTwitter />}
+              aria-label="link to my twitter profile"
+            />
             <NavLink
               url="https://www.linkedin.com/in/carlosdumar/"
               icon={<FaLinkedin />}
+              aria-label="link to my linkedin profile"
             />
           </HStack>
         </HStack>
@@ -80,7 +88,9 @@ const Header: FC<any> = () => {
         <Box pb={4} display={{ md: "none" }}>
           <Stack as={"nav"}>
             {Links.map((link) => (
-              <NavLink key={link}>{link}</NavLink>
+              <NavLink key={link} aria-label={`link to ${link}`}>
+                {link}
+              </NavLink>
             ))}
           </Stack>
         </Box>
