@@ -51,14 +51,17 @@ const Footer = () => {
               <NavLink
                 url="https://github.com/adminDreamBike/"
                 icon={<FaGithub color="#42446E" />}
+                aria-label="link to my github profile"
               />
               <NavLink
                 url="https://x.com/ingitrodriguez"
                 icon={<FaXTwitter color={"#42446E"} />}
+                aria-label="link to my X profile"
               />
               <NavLink
                 url="https://www.linkedin.com/in/carlosdumar/"
                 icon={<FaLinkedin color={"#42446E"} />}
+                aria-label="link to my linkedin profile"
               />
             </HStack>
           </HStack>
@@ -68,7 +71,9 @@ const Footer = () => {
       <HStack spaceX={15} alignItems={"center"} w={"100%"} py={2}>
         <HStack as={"nav"} spaceX={10} display={{ base: "none", md: "flex" }}>
           {Links.map((link) => (
-            <NavLink key={link}>{link}</NavLink>
+            <NavLink key={link} aria-label={`link to ${link}`}>
+              {link}
+            </NavLink>
           ))}
         </HStack>
       </HStack>
