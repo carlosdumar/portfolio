@@ -68,7 +68,7 @@ const Overview = () => {
           </Button>
         </VStack>
         <Image
-          src="/images/carlos.jpeg"
+          src="/images/carlos.webp"
           boxSize="240px"
           alt="Carlos Rodriguez"
           borderRadius="full"

@@ -9,10 +9,17 @@ interface Props {
   url?: string;
   icon?: React.ReactNode;
   iconPosition?: "left" | "right";
+  'aria-label': string;
 }
 
 const NavLink = (props: Props) => {
-  const { children, url = "", icon, iconPosition = "left" } = props;
+  const {
+    children,
+    url = "",
+    icon,
+    iconPosition = "left",
+    'aria-label': ariaLabel,
+  } = props;
   const { scrollToSection } = useScroll();
 
   return (
@@ -26,6 +33,7 @@ const NavLink = (props: Props) => {
       href={url || undefined}
       target={url ? "_blank" : "_self"}
       onClick={() => scrollToSection(getElementName(children))}
+      aria-label={ariaLabel}
     >
       {icon && iconPosition === "left" && icon}
       {children}
