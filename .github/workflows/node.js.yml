@@ -21,6 +21,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v4
+      with:
+        version: 10 # Or specify a different version, or omit for latest
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
