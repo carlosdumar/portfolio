@@ -90,7 +90,7 @@ const ChatbotAI = () => {
       ref={chatbotRef as React.RefObject<HTMLDivElement>}
     >
       <div className="max-w-2xl mx-auto">
-        <Card.Root className="shadow-xl border-0 bg-white/80 backdrop-blur">
+        <Card.Root className="shadow-xl border-0 bg-white/80 backdrop-blur max-h-[80vh] overflow-y-auto">
           <CardHeader
             className="border-b bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-t-lg font-mono"
             p={5}
