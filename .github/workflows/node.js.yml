@@ -3,6 +3,8 @@
 
 name: Node.js CI with pnpm
 
+env:
+  ACTIONS_STEP_DEBUG: true
 on:
   push:
     branches: [ "main" ]
@@ -30,6 +32,14 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'pnpm'
+    - name: Cache NPM dependencies
+      uses: actions/cache@v4
+      id: npm-cache
+      with:
+        path: ~/.pnpm-store
+        key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
     - run: pnpm install
     - run: pnpm run build
     
