@@ -3,6 +3,8 @@ export const excludedProjects = [
   "test-royal-caribbean",
   "nextjs-dashboard",
   "platzicourse",
+  "cdumar",
+  "skills-test-with-actions"
 ];
 
 export const Links = ["Home", "About", "Tech Stack", "Projects", "Contact"];

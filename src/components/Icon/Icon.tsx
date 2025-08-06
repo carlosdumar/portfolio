@@ -4,8 +4,8 @@ import { FC } from "react";
 interface IIcon {
   name: string;
   alt: string;
-  width: string;
-  height: string;
+  width: number;
+  height: number;
 }
 const Icon: FC<IIcon> = ({ name, alt, width, height }) => {
   return (
