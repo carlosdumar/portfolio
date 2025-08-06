@@ -33,12 +33,17 @@ const objCovers = {
   "youtube-homepage": "youtube.webp",
 };
 
-const Projects: FC = () => {
-  const { user = [], isLoading, isError, error } = useGitHubUser();
+interface ProjectsProps {
+  initialData: any;
+}
+
+const Projects: FC<ProjectsProps> = ({ initialData }: ProjectsProps) => {
+  const { user = [], isLoading, isError, error } = useGitHubUser(initialData);
 
   const filteredProjects = user?.filter(
     (project: any) => !excludedProjects.includes(project.name)
   );
+
   if (isError) {
     toaster.create({
       title: `${error}`,
@@ -79,7 +84,7 @@ const Projects: FC = () => {
               ) : (
                 <>
                   <PictureImage
-                    height={'200px'}
+                    height={"200px"}
                     alt="cover project"
                     src={`/images/${
                       objCovers[name as keyof typeof objCovers] || "cover.webp"
@@ -107,7 +112,7 @@ const Projects: FC = () => {
                           <Link
                             href={homepage || null}
                             textDecoration={"underline"}
-                            target="_blank"                            
+                            target="_blank"
                           >
                             Live Preview
                           </Link>
