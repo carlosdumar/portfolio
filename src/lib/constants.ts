@@ -1,0 +1,1 @@
+export const GOOGLE_DRIVE_CV_CARLOS='https://drive.google.com/file/d/19w-ygh-QsvL-SJbMjXI9zbtAxrmf_bKO/view?usp=drive_link';

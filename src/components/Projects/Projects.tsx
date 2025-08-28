@@ -30,7 +30,7 @@ const textStyle = {
 const objCovers = {
   "restaurant-ui": "restaurant.webp",
   "weather-app": "weather.webp",
-  "youtube-homepage": "youtube.webp",
+  "mameytube": "mameytube.webp",
 };
 
 interface ProjectsProps {

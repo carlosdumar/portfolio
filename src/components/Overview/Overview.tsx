@@ -11,6 +11,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { File } from "lucide-react";
+import { GOOGLE_DRIVE_CV_CARLOS } from "../../lib/constants";
 
 const ringCss = defineStyle({
   background: "linear-gradient(#E70FAA, #13B0F5)",
@@ -50,7 +51,7 @@ const Overview = () => {
             variant={"outline"}
           >
             <Link
-              href="https://drive.google.com/file/d/1C-Uxh5kgzvdXw17zueaVSV_ygEAuFTKn/view?usp=sharing"
+              href={GOOGLE_DRIVE_CV_CARLOS}
               target="_blank"
               alignSelf={"flex-end"}
             >
