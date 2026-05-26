@@ -18,13 +18,15 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [22.x]
+        node-version: [20.x, 22.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
     - uses: actions/checkout@v4
     - name: Setup pnpm
       uses: pnpm/action-setup@v4
+      with:
+        version: 11.2.2 # Or specify a different version, or omit for latest
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
