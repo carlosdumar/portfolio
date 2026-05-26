@@ -3,13 +3,15 @@
 import { Link } from "@chakra-ui/react/link";
 import useScroll from "../../hooks/useScroll";
 import { getElementName } from "../../lib/utils";
-
 interface Props {
   children?: React.ReactNode;
   url?: string;
   icon?: React.ReactNode;
   iconPosition?: "left" | "right";
   'aria-label': string;
+  borderBottom?: string;
+  borderColor?: string;
+  transition?: string;
 }
 
 const NavLink = (props: Props) => {
@@ -18,22 +20,21 @@ const NavLink = (props: Props) => {
     url = "",
     icon,
     iconPosition = "left",
-    'aria-label': ariaLabel,
+    ...rest
   } = props;
   const { scrollToSection } = useScroll();
 
   return (
     <Link
       px={2}
-      py={1}
-      rounded={"md"}
+      py={1}     
       _hover={{
         textDecoration: "none",
       }}
       href={url || undefined}
       target={url ? "_blank" : "_self"}
       onClick={() => scrollToSection(getElementName(children))}
-      aria-label={ariaLabel}
+      {...rest}
     >
       {icon && iconPosition === "left" && icon}
       {children}

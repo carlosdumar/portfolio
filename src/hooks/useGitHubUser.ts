@@ -10,6 +10,7 @@ const useGitHubUser = (initialData: any) => {
     },
     initialData: initialData,
   });
+  
   return { user: data, isLoading, isError, error };
 };
 

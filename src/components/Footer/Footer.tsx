@@ -5,7 +5,6 @@ import {
   HStack,
   Icon,
   VStack,
-  Text,
   Link,
   Separator,
   Image,
@@ -15,7 +14,6 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import NavLink from "../NavLink/NavLink";
 import { useMediaQuery } from "@chakra-ui/react";
-import { MdOutlinePhoneAndroid } from "react-icons/md";
 import { IoMdMail } from "react-icons/io";
 
 const Footer = () => {
@@ -27,23 +25,16 @@ const Footer = () => {
           <Box>
             <Image src={"/images/logo.png"} width={"120px"} alt="image log" />
           </Box>
-          <HStack justifyContent={"space-between"}>
-            {isMobile ? (
-              <Icon as={MdOutlinePhoneAndroid} fontSize={"24px"} />
-            ) : (
-              <Text fontSize={"sm"} wordBreak={"break-word"}>
-                +573015363012
-              </Text>
-            )}
+          <HStack justifyContent={"space-between"}>           
             <HStack>
               <Icon as={IoMdMail} fontSize={"24px"} />
               {!isMobile && (
                 <Link
-                  href="mailto:example@email.com"
+                  href="mailto:carlosdumar4@gmail.com"
                   fontSize={"sm"}
                   wordBreak={"break-word"}
                 >
-                  carlosdumar@gmail.com
+                  carlosdumar4@gmail.com
                 </Link>
               )}
             </HStack>
