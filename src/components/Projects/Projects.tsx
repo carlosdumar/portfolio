@@ -31,6 +31,7 @@ const objCovers = {
   "restaurant-ui": "restaurant.webp",
   "weather-app": "weather.webp",
   "mameytube": "mameytube.webp",
+  "spotify-statistics": "spotify.webp"
 };
 
 interface ProjectsProps {
@@ -54,7 +55,7 @@ const Projects: FC<ProjectsProps> = ({ initialData }: ProjectsProps) => {
   return (
     <VStack id="projects" px={{ lg: 40, md: 40, base: 4 }} gapY={10}>
       <Box textAlign={"center"}>
-        <Text fontSize={32} color={"#42446E"} fontWeight={"bold"}>
+        <Text fontSize={36} color={"#42446E"} fontWeight={"bold"}>
           Projects
         </Text>
         <Text color={"#666666"}>Things Ive built so far</Text>

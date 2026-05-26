@@ -18,11 +18,19 @@ import { Links } from "../../lib/utils";
 import NavLink from "../NavLink/NavLink";
 import SwitchTheme from "../SwitchTheme/SwitchTheme";
 import { useTheme } from "../../context/ThemeContext";
+import useActiveSection from "../../hooks/useActiveSection";
+
+const sections = ["overview", "contact", "about", "projects", "techstack"];
 
 const Header: FC<any> = () => {
   const { open, onOpen, onClose } = useDisclosure();
   const { theme } = useTheme();
 
+  const activeSection = useActiveSection(
+    { threshold: 0.5, root: null, rootMargin: "-10% 0px -10% 0px" },
+    sections,
+  );
+  console.log("activeSection", activeSection);
   return (
     <Box
       pl={{ lg: 40, md: 40, base: 4 }}
@@ -57,11 +65,19 @@ const Header: FC<any> = () => {
         <HStack gapX={{ lg: 60, md: 20, base: 10 }}>
           <HStack spaceX={15} alignItems={"center"}>
             <HStack as={"nav"} gapX={10} display={{ base: "none", md: "flex" }}>
-              {Links.map((link) => (
-                <NavLink key={link} aria-label={`link to ${link}`}>
-                  {link}
-                </NavLink>
-              ))}
+              {Links.map((link) => {
+                return (
+                  <NavLink
+                    key={link}
+                    aria-label={`link to ${link}`}
+                    borderBottom={activeSection === link.toLowerCase().replaceAll(" ", "") ? "2px solid" : "none"}
+                    borderColor={activeSection === link.toLowerCase().replaceAll(" ", "") ? "purple.500" : "transparent"}
+                    transition="all 0.3s"
+                  >
+                    {link}
+                  </NavLink>
+                );
+              })}
             </HStack>
           </HStack>
           <HStack gapX={2}>

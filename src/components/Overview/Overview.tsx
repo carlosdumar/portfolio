@@ -29,7 +29,7 @@ const Overview = () => {
     >
       <HStack justifyContent={"space-between"} width={"100%"}>
         <VStack>
-          <Text fontWeight={"bold"} color={"#42446E"} fontSize={40}>
+          <Text fontWeight={"bold"} color={"#42446E"} fontSize={56}>
             Hi 👋, <br />
             My Name is
             <br />

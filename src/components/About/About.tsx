@@ -9,7 +9,7 @@ const About = () => {
     <Flex id="about" flexDirection={"column"} px={{ lg: 40, md: 40, base: 4 }}>
       <VStack>
         <Text
-          fontSize={32}
+          fontSize={36}
           color={"#42446E"}
           fontWeight={"bold"}
           textAlign={"left"}
@@ -19,16 +19,16 @@ const About = () => {
           About Me
         </Text>
         <Text>
-          Carlos has 15 years+ of experience as software developer. 5 years of
-          experience written web apps in health, editorials, and educational
-          industries. He has extensive knowledge of JavaScript as well as
-          significant experience with popular libraries like React and Redux,
-          MobX, Zustand
+          Senior Frontend Engineer with 15+ years in software development and 5+ years specializing in React, 
+          Next.js, and TypeScript. Recently built a production AI chat interface serving thousands of daily users within 
+          a native iOS application at EPAM, implementing Pub/Sub communication patterns and Content Security Policy 
+          hardening. Experienced delivering accessible, high-performance web applications across global consultancies 
+          (EPAM, Globant, Endava) for US enterprise clients in pharma, education,  and healthcare. 
         </Text>
       </VStack>
       <VStack w={"100%"}>
         <Text
-          fontSize={32}
+          fontSize={36}
           color={"#42446E"}
           fontWeight={"bold"}
           textAlign={"left"}
@@ -187,7 +187,7 @@ const About = () => {
       </VStack>
       <VStack w={"100%"}>
         <Text
-          fontSize={32}
+          fontSize={36}
           color={"#42446E"}
           fontWeight={"bold"}
           textAlign={"left"}
@@ -209,9 +209,9 @@ const About = () => {
             </Text>
             <HStack>
               <HStack color={"#A7A7A7"}>
-                <Icon>
+                {/* <Icon>
                   <FaRegBuilding />
-                </Icon>
+                </Icon> */}
                 <Text fontSize={"14px"}>Santo Tomas University</Text>
               </HStack>
             </HStack>
