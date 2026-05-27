@@ -56,7 +56,7 @@ const Overview = () => {
               alignSelf={"flex-end"}
             >
               <File />
-              <Text
+              {/* <Text
                 color={"transparent"}
                 backgroundClip={"text"}
                 backgroundImage={"linear-gradient(#E70FAA, #13B0F5)"}
@@ -64,7 +64,18 @@ const Overview = () => {
                 fontWeight={"bold"}
               >
                 View Resume
-              </Text>
+              </Text> */}
+              <Link
+                color={"transparent"}
+                backgroundClip={"text"}
+                backgroundImage={"linear-gradient(#E70FAA, #13B0F5)"}
+                textTransform={"uppercase"}
+                fontWeight={"bold"}
+                href="/cv/CV Carlos Rodriguez.pdf"
+                target="_blank"
+              >
+                View Resume
+              </Link>
             </Link>
           </Button>
         </VStack>
