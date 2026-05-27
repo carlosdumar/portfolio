@@ -3,8 +3,8 @@ import "@testing-library/jest-dom";
 import Footer from "../Footer";
 
 describe("Footer component", () => {
-  it("should render", () => {
+  it("should render show the email", () => {
     render(<Footer />);
-    expect(screen.getByText("+573015363012")).toBeInTheDocument();
+    expect(screen.getByText("carlosdumar4@gmail.com")).toBeInTheDocument();
   });
 });
