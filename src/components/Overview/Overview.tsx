@@ -56,15 +56,6 @@ const Overview = () => {
               alignSelf={"flex-end"}
             >
               <File />
-              {/* <Text
-                color={"transparent"}
-                backgroundClip={"text"}
-                backgroundImage={"linear-gradient(#E70FAA, #13B0F5)"}
-                textTransform={"uppercase"}
-                fontWeight={"bold"}
-              >
-                View Resume
-              </Text> */}
               <Link
                 color={"transparent"}
                 backgroundClip={"text"}
