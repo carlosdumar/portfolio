@@ -2,3 +2,4 @@ allowBuilds:
   sharp: false
   esbuild: true
   "@swc/core": true
+  unrs-resolver: false
