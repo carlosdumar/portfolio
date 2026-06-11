@@ -39,7 +39,10 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
     - run: pnpm install
-    - run: pnpm run build
+    - name: Build application
+      env:
+        RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+      run: pnpm run build
     
   test:
     runs-on: ubuntu-latest
