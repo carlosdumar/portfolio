@@ -17,7 +17,7 @@ const SwitchTheme = () => {
           <Icon as={FaMoon} color={"gray.400"} />
         </Switch.Indicator>
       </Switch.Control>
-      <Switch.Label>Theme</Switch.Label>
+      <Switch.Label display={{base: 'none', md: 'inline-block'}}>Theme</Switch.Label>
     </Switch.Root>
   );
 };
