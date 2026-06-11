@@ -30,7 +30,7 @@ const Header: FC<any> = () => {
     { threshold: 0.5, root: null, rootMargin: "-10% 0px -10% 0px" },
     sections,
   );
-  console.log("activeSection", activeSection);
+  
   return (
     <Box
       pl={{ lg: 40, md: 40, base: 4 }}
